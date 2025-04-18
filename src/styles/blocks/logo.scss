@@ -1,0 +1,7 @@
+.logo {
+  &__image {
+    width: $logoWidth;
+    display: block;
+    filter: brightness(0.6) contrast(1.4);
+  }
+}

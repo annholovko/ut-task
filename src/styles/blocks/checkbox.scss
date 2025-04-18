@@ -1,0 +1,57 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+
+  @include onTablet {
+    gap: 24px;
+  }
+
+  @include onDesktop {
+    gap: 32px;
+  }
+
+  &__label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 398px;
+  }
+
+  &__label input[type="checkbox"] {
+    flex-shrink: 0;
+  }
+
+  &__text {
+    flex: 1;
+    max-width: 360px;
+    padding-top: 2px;
+    margin-top: 0;
+    margin-left: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    word-break: break-word;
+  }
+}
+
+.checkbox input[type="checkbox"] {
+  appearance: none;
+  @include square(28px);
+  border: 4px solid #150954;
+  border-radius: 6px;
+  background-color: $whiteTransparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox input[type="checkbox"]:checked::after {
+  content: "✔";
+  position: absolute;
+  left: 3px;
+  top: -4px;
+  font-size: 18px;
+  color: #150954;
+}

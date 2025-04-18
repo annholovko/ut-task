@@ -1,0 +1,57 @@
+.header {
+  padding: 7px 0 9px;
+  margin-bottom: 8px;
+
+  @include onTablet {
+    margin-bottom: 24px;
+  }
+
+  @include onDesktop {
+    margin-bottom: 32px;
+  }
+
+  &--two-columns {
+    margin-bottom: 16px;
+
+    @include onTablet {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include onDesktop {
+      padding: 0 8px;
+    }
+  }
+
+  &__image {
+    &--centered {
+      margin: 0 auto;
+    }
+  }
+
+  &__button {
+    &--none {
+      display: none;
+    }
+    &::before {
+      content: "Already have an account?";
+
+      display: none;
+      position: relative;
+      padding-top: 4px;
+      right: 13px;
+
+      color: $mainAccentColor;
+      line-height: 1.5rem;
+
+      @include onDesktop {
+        display: inline-block;
+      }
+    }
+  }
+}

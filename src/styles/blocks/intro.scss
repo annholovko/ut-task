@@ -1,0 +1,43 @@
+.intro {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 432px;
+
+  @include onTablet {
+    max-width: 464px;
+  }
+
+  &__title {
+    @include onTablet {
+      padding-top: 0;
+    }
+    @include onDesktop {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 8px;
+  }
+
+  &__slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 8px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__image {
+    cursor: default;
+    @include square(80px);
+    border-radius: $borderRadius;
+
+    &:first-child,
+    &:last-child {
+      width: 64px;
+    }
+  }
+}

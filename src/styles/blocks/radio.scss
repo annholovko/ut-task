@@ -1,0 +1,76 @@
+.radio {
+  &__form {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  &__container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 16px;
+
+    @include onTablet {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8px;
+
+    background: $whiteTransparent;
+    transition: all $transitionDuration ease;
+  }
+
+  &__image {
+    display: block;
+    @include square(80px);
+    margin-bottom: 4px;
+    border-radius: $cardBorderRadius;
+
+    @include onTablet {
+      @include square(96px);
+    }
+  }
+
+  &__card-text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5rem;
+    font-weight: $fontSemibold;
+    color: $mainAccentColor;
+  }
+
+  &__card {
+    cursor: pointer;
+    border-radius: $cardBorderRadius;
+    overflow: hidden;
+    transition: transform $transitionDuration ease;
+    min-width: 104px;
+    max-width: 160px;
+    width: 100%;
+    text-align: center;
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"]:checked + .radio__content {
+      border: none;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+      background: $whiteButtonColor;
+    }
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

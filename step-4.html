@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+    <title>Your logo</title>
+
+    <link rel="preconnect"
+      href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+
+    <link rel="stylesheet"
+      href="./src/styles/style.css">
+  </head>
+  <body class="page__body">
+    <header class="page__section header">
+      <div class="container">
+        <div class="header__content">
+          <div class="header__image header__image--centered">
+            <a href="#"
+              class="logo">
+              <img class="logo__image"
+                src="/src/images/Logo.png"
+                alt="Logo">
+            </a>
+          </div>
+          <div class="header__button header__button--none">
+            <button type="button"
+              class="white-button white-button--hover">Sign up</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="page__section progress">
+        <div class="container">
+          <progress class="progress__bar"
+            max="100"
+            value="66.7"></progress>
+        </div>
+      </section>
+      <section class="page__section radio email">
+        <div class="container">
+          <p class="page__section-title email__title">What kind of content
+            do you enjoy? 👀</p>
+          <form class="radio__form"
+            onsubmit="window.location.href='step-5.html';return false;"
+            method="get">
+            <div class="radio__container email__container">
+              <label class="radio__card">
+                <input class="radio__input"
+                  type="radio"
+                  name="content"
+                  value="hot">
+                <div class="radio__content">
+                  <img class="radio__image"
+                    src="/src/images/Hot.png"
+                    alt="Hot emoji">
+                  <p class="radio__card-text email__card-text">Hot</p>
+                </div>
+              </label>
+
+              <label class="radio__card email-radio__card">
+                <input type="radio"
+                  name="content"
+                  value="trendy">
+                <div class="radio__content">
+                  <img class="radio__image"
+                    src="/src/images/Trendy.png"
+                    alt="Trendy emoji">
+                  <p class="radio__card-text email__card-text">Trendy</p>
+                </div>
+              </label>
+            </div>
+            <div class="email__container">
+              <p class="page__section-subtitle email__subtitle">What is your
+                email address?</p>
+              <label for="email">
+                <input type="email"
+                  class="email__input input"
+                  name="email"
+                  id="email"
+                  placeholder="Type your email"
+                  required />
+              </label>
+              <p class="page__section-text email__text">Email is required for
+                registration.</p>
+            </div>
+            <div class="radio__button">
+              <input type="submit"
+                value="Continue →"
+                class="button">
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

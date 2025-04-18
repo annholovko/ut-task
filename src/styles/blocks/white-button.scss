@@ -1,0 +1,26 @@
+.white-button {
+  width: 103px;
+  height: 40px;
+  padding: 5px;
+
+  background-color: $whiteButtonColor;
+  border: 1px solid $whiteButtonColor;
+  border-radius: $borderRadius;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: $fontSemibold;
+  font-size: inherit;
+  line-height: 1.5rem;
+  color: $buttonHoverColor;
+
+  box-shadow: 0px 1px 4px 0px #343a3f0d;
+  box-shadow: 0px 4px 12px 0px #343a3f1f;
+
+  transition: all $transitionDuration;
+
+  &:hover {
+    background-color: #000;
+    border-color: #000;
+    color: $whiteButtonColor;
+  }
+}

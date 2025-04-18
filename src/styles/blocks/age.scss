@@ -1,0 +1,65 @@
+.age {
+  &__title {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+  }
+
+  &__form {
+    max-width: 400px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__selections {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+
+    margin-bottom: 16px;
+
+    @include onTablet {
+      margin-bottom: 24px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 32px;
+    }
+
+    &--row {
+      flex-direction: column;
+      margin-bottom: 16px;
+
+      @include onTablet {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__selection {
+    width: 100%;
+  }
+
+  &__select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image: url("../images/nav-arrow-down.png");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 24px;
+  }
+}

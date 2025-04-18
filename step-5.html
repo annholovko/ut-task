@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+    <title>Your logo</title>
+
+    <link rel="preconnect"
+      href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+
+    <link rel="stylesheet"
+      href="./src/styles/style.css">
+    <script>
+      document.getElementById("passwordForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const pass = document.getElementById("password").value;
+        const confirm = document.getElementById("confirmation").value;
+
+        if (pass !== confirm) {
+          alert("Passwords do not match");
+          return;
+        }
+
+        window.location.href = "step-5.html";
+      });
+    </script>
+  </head>
+  <body class="page__body">
+    <header class="page__section header">
+      <div class="container">
+        <div class="header__content">
+          <div class="header__image header__image--centered">
+            <a href="#"
+              class="logo">
+              <img class="logo__image"
+                src="/src/images/Logo.png"
+                alt="Logo">
+            </a>
+          </div>
+          <div class="header__button header__button--none">
+            <button type="button"
+              class="white-button white-button--hover">Sign up</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="page__section progress">
+        <div class="container">
+          <progress class="progress__bar"
+            max="100"
+            value="83.33"></progress>
+        </div>
+      </section>
+      <section class="page__section password">
+        <div class="container">
+          <h1 class="page__section-title">Create your password</h1>
+          <form action="step-6.html"
+            method="get"
+            class="password__form">
+            <div class="password__container">
+              <label for="password">
+                <input type="password"
+                  class="password__input input"
+                  name="password"
+                  id="password"
+                  minlength="8"
+                  maxlength="30"
+                  placeholder="Your password"
+                  required />
+              </label>
+              <label for="confirmation">
+                <input type="password"
+                  class="password__input input"
+                  name="confirmation"
+                  id="confirmation"
+                  minlength="8"
+                  maxlength="30"
+                  placeholder="Confirm password"
+                  required />
+              </label>
+              <p class="page__section-text password__text">
+                Passwords must be at least 8 characters long. You can recover
+                passwords at any time
+                using the email address you provided.
+              </p>
+            </div>
+            <input type="submit"
+              value="Continue →"
+              class="button">
+          </form>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

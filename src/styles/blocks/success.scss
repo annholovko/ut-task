@@ -1,0 +1,29 @@
+.success {
+  display: flex;
+  justify-content: center;
+
+  &__image {
+    @include square(120px);
+    cursor: none;
+
+    @include onTablet {
+      @include square(200px);
+    }
+  }
+
+  &__subtitle {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+
+    @include onTablet {
+      margin-bottom: 24px;
+
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+
+    @include onDesktop {
+      margin-bottom: 32px;
+    }
+  }
+}
